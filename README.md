@@ -15,3 +15,5 @@ totalmente patrocinada pela empresa IFood.
 - 💼 Experiência em administração e gestão de projetos
 
 ![Minhas estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=Vtsnet&show_icons=true&bg_color=00000000)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=vtsnet&theme=aura&show_icons=true)
+
