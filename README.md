@@ -4,7 +4,7 @@ Meu nome é Valdir Teixeira dos Santos
 Morando em Curitiba/PR - Brasil
 
 Estudei Matemática na Universidade Federal do Paraná,
-Curso de Tecnologo em Administração na Universidade Positivo.
+Curso de Tecnologo em Administração na Universidade Positivo.  
 Atualmente estudando linguagem de Programção na escola Cubos Academy.
 Um curso de Desenvolvimento de Software - Foco em Backend, com uma bolsa de estudos
 totalmente patrocinada pela empresa IFood.
