@@ -1,86 +1,35 @@
-![](https://i.imgur.com/xG74tOh.png)
+O projeto aqui indicado é a implementação de um servidor web usando o framework Express.js para criar uma calculadora simples que realiza operações matemáticas básicas (soma, subtração, multiplicação e divisão) com base nos parâmetros de consulta fornecidos na URL. 
 
-# Exercício 01
+Controladores de Operações Matemáticas (calculadora.js):
 
-## Calculadora Online
+Define as quatro funções básicas: somar, subtrair, multiplicar e dividir, que manipulam as solicitações HTTP para suas respectivas operações. Cada uma dessas funções recebe um objeto req (representando a solicitação HTTP) e um objeto res (representando a resposta HTTP).
 
-Neste exercício devemos criar um servidor com 4 rotas _GET_ para executar as 4 operações básicas da matemática (somar, subtrair, multiplicar, dividir)
-Você deverá criar um servidor como mostrado na aula contendo as seguintes rotas _GET_ abaixo:
+Arquivo (index.js):
 
-```javascript
-/somar
-/subtrair
-/multiplicar
-/dividir
-```
+Importa o módulo Express e o atribui a express.
+Importa os controladores de operações matemáticas somar, subtrair, multiplicar e dividir do arquivo calculadora.js.
+Cria uma instância do aplicativo Express chamada app.
+Roteadores de Operações Matemáticas:
 
-Todas as rotas devem esperar dois parâmetros query **num1** e **num2** e retornar a resposta da operação.
+Foi criando também uma instância de um roteador Express chamado rotas.
 
-### Exemplos de requisições e respostas:
+Definição das Rotas:
 
-_Para a requisição na rota `/somar` utilizando `num1=10` e `num2=5` deveremos retornar `15`_
+Definido quatro rotas usando os métodos get do roteador rotas. Cada rota corresponde a uma operação matemática (soma, subtração, multiplicação e divisão).
+Para cada rota, é associado um controlador correspondente (somar, subtrair, multiplicar e dividir) que será executado quando a rota for acessada.
 
-Requisição
+Exportação do Roteador:
 
-```javascript
-/somar?num1=10&num2=5
-```
+Exporta o objeto rotas, que contém todas as rotas e associações de controladores.
 
-Resposta
+Iniciando o Servidor:
 
-```javascript
-15
-```
+O servidor Express é iniciado para rodar na porta 3000 usando o método listen.
 
-_Para a requisição na rota `/subtrair` utilizando `num1=10` e `num2=5` deveremos retornar `5`_
+Considerações finais.
 
-Requisição
+No geral, esse código cria um servidor web que pode realizar operações matemáticas simples com base nos parâmetros da consulta em URLs. 
+Por exemplo, ao acessar /somar?num1=5&num2=3, o servidor responderá com a soma de 5 e 3, que é 8. 
+Da mesma forma, pode-se acessar /subtrair?num1=10&num2=4, /multiplicar?num1=6&num2=2, e /dividir?num1=8&num2=2 para realizar outras operações matemáticas. 
+Se os parâmetros da consulta não forem válidos (ou seja, não forem números), o servidor responderá com "Números invalidos".
 
-```javascript
-/subtrair?num1=10&num2=5
-```
-
-Resposta
-
-```javascript
-5
-```
-
-_Para a requisição na rota `/multiplicar` utilizando `num1=10` e `num2=5` deveremos retornar `50`_
-
-Requisição
-
-```javascript
-/multiplicar?num1=10&num2=5
-```
-
-Resposta
-
-```javascript
-50
-```
-
-_Para a requisição na rota `/dividir` utilizando `num1=10` e `num2=5` deveremos retornar `2`_
-
-Requisição
-
-```javascript
-/dividir?num1=10&num2=5
-```
-
-Resposta
-
-```javascript
-2
-```
-
----
-
-Preencha a checklist para finalizar o exercício:
-
--   [ ] Resolver o exercício revendo a aula se necessário
--   [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
--   [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
--   [ ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
-
-###### tags: `backend` `lógica` `exercício` `nodeJS` `JavaScript`
